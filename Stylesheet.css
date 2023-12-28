@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gill Sans", sans-serif;
+}
+
+body {
+    /* background-image: url(https://picsum.photos/seed/picsum/536/354);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: #76eec6;
+}
+
+.container .todo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: azure;
+    width: 400px;
+    overflow: auto;
+    /* min-height: 530px; */
+    height: 300px;
+    border-radius: 10px;
+}
+
+.todolist {
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    align-items: center;
+}
+
+.todolist h1 {
+    font-size: x-large;
+}
+
+.todolist img {
+    height: 42px;
+    margin-left: 10px;
+}
+
+.todo .addtask {
+    display: flex;
+    margin-top: 10px;
+    margin: 10px 10px;
+}
+
+.todo .addtask input {
+    font-family: "Gill Sans Extrabold", sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-weight: 15px;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+input::placeholder {
+    font-size: 16px;
+    font-style: oblique;
+}
+
+.todo .addtask button {
+    padding: 5px;
+    margin-left: 3px;
+    width: 100px;
+    border-radius: 20px;
+    font-size: x-large;
+    font-family: sans-serif;
+    background-color: #ff7f50;
+    /* border: none; */
+    outline: none;
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+    font-size: 15px;
+    padding: 5px 35px;
+    margin-left: 15px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 5px;
+    left: 8px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #555;
+}
+
+ul li.checked::before {
+    background-image: url(checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 70px;
+    width: 25px;
+    height: 24px;
+    line-height: 25px;
+    color: #555;
+    font-size: 22px;
+    text-align: center;
+}
+
+ul li span:hover {
+    background: #ff7f50;
+    border-radius: 5px;
+}
+
+.Clear {
+    text-align: center;
+    justify-content: center;
+}
+
+.Clear button {
+    width: 80px;
+    height: 35px;
+    border-radius: 8px;
+    font-size: larger;
+    background-color: #ff7f50;
+    cursor: pointer;
+}
